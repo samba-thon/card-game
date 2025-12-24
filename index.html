@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>War - Card Game</title>
+    <link rel="stylesheet" href="resources/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>CARD WAR</h1>
+      </header>
+
+      <!-- MAIN GAME AREA -->
+      <main class="game-area">
+        <!-- PLAYER SECTION (TOP) -->
+        <section class="player-section player-section-top">
+          <div class="deck-info">
+            <p>Your Deck: <span id="playerCount">26</span> cards</p>
+          </div>
+          <div class="cards-display">
+            <div class="deck-pile">
+              <div id="playerDeckBack" class="card card-back"></div>
+            </div>
+            <div class="played-card-area">
+              <div id="playerPlayedCard" class="card empty"></div>
+            </div>
+          </div>
+        </section>
+
+            <!-- CENTER - ROUND STATUS -->
+            <section class="center-area">
+              <div id="roundInfo" class="round-info"></div>
+              <div id="roundStatus" class="round-status">
+                <p>Click "Draw Card" to start!</p>
+              </div>
+            </section>        <!-- COMPUTER SECTION (BOTTOM) -->
+        <section class="player-section player-section-bottom">
+          <div class="deck-info">
+            <p>Computer Deck: <span id="computerCount">26</span> cards</p>
+          </div>
+          <div class="cards-display">
+            <div class="played-card-area">
+              <div id="computerPlayedCard" class="card empty"></div>
+            </div>
+            <div class="deck-pile">
+              <div id="computerDeckBack" class="card card-back"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- CONTROL PANEL -->
+      <section class="control-panel">
+        <button id="drawBtn" class="btn btn-primary">Draw Card</button>
+        <button id="newGameBtn" class="btn btn-secondary">New Game</button>
+        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+      </section>
+    </div>
+
+    <script src="resources/script.js"></script>
+  </body>
+</html>

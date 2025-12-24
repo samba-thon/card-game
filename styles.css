@@ -1,0 +1,205 @@
+/* GENERAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2d5016;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: #2d5016;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+/* GAME AREA */
+.game-area {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* PLAYER SECTIONS */
+.player-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.deck-info {
+  color: #ffffff;
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+}
+
+.deck-info p {
+  margin: 5px 0;
+}
+
+.cards-display {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARDS */
+.card {
+  width: 120px;
+  height: 170px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card.card-back {
+  background: repeating-linear-gradient(
+    45deg,
+    #1b3d0c,
+    #1b3d0c 10px,
+    #2d5016 10px,
+    #2d5016 20px
+  );
+  color: #ffffff;
+}
+
+.card.empty {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px dashed #ffffff;
+}
+
+/* CENTER STATUS AREA */
+.center-area {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.round-info {
+  color: #cccccc;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.round-status {
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.round-status p {
+  margin: 0;
+}
+
+/* CONTROL PANEL */
+.control-panel {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #1b3d0c;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0f2407;
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .card {
+    width: 100px;
+    height: 140px;
+    font-size: 2.5em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
